@@ -115,7 +115,11 @@ async def relic(ctx, arg):
     await ctx.send(embed=relicEmbed)
 
 
-
+@client.command()
+async def servers(ctx):
+    activeservers = client.guilds    
+    for guild in activeservers:
+      await ctx.send(guild.name)
 
 
 client.run("MTAxODk1MTEyOTYzNzMzNTA1MA.GpHP2L.IaiA_NHvaSTTn__jNIx3Q6RUnuw8WD69D3J48Q")
