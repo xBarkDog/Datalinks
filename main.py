@@ -1,3 +1,4 @@
+#imports
 import discord
 import os
 import recipies
@@ -10,6 +11,7 @@ import sys
 
 from discord.ext import commands
 
+#intents
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
@@ -17,9 +19,11 @@ intents.message_content = True
 
 client = commands.Bot(command_prefix='^', intents=intents)
 
-
+#list of datalink articles
 articles = ["servo","mechlimb","stone","ice","lamp","copper","iron","drivebox","jade","transformer","arcolantium","brick","silicon","gold","instrument","levitator","hydrogenerator","carbonfiber","uranium","antenna","plastic","flint","gear","diamond","eridanium","seat","aluminium","sail","rubber","cleats","spotlight","turbofan","cooler","anchor","delaywire","titanium","crudewing","amethyst","glass","wing","herbicide","leaves","organicmatter","neodymium","thruster","gravdevice","steeringseat","lightningrod","psibutton","gyro","dynamite","refinery","dimensionaldoor","forcefield","missile","television","magnesium","sand","asphalt","gunpowder","ashes","touchtrigger","zapwire","ruby","explosives","remoteseat","quartz","solarpanel","speaker","powercell","container","inverter","heater","wire","sign","switch","light","generator","signalwire","tintedglass","polysilicon","balloon","truss","firework","faucet","exoticmatter","photonshard","glowtube","cannon","treads","motor","propeller","converter","pipe","lift","enricheduranium","signalswitch","empbomb","coat","polyestercoat","engine","inertiatrigger","gammadrive","warhead","reactor","spawnpoint","rocket","camera","spacesuit","protalium","protoncell","airshield","factory","ore","modem","basecenter","seeker","hyperdrive","prospector","steamengine","lirvanite","energybomb","timemachine","pod","biowall","clock","ballasttank","keyboard","cloakingdevice","alkalinecell","commlink","bogie","radiationsuit","sulfur","activedefense","aethergate","combolock","lab","powerplant","teleporter","goo","hull","ionrocket","iondrive","lasertargeter","actuator","node","valve","memorychip","monitor","scanner","mainspring","heatcylinder","searchlight","computer","energyshield","accelerator","energycannon","abantium","armor","rotor","beamcannon","lexan","zaktralia","firewood","probabilityfield","foam","flamethrower","launcher","sensor","graphicscard","cloth","ceramic","ramjet","dish","button","singularitybomb","radar","gel","plant","inductor","firebox","geigercounter","gun","book","track","bend","market","warpgate","automaton","parachutepack","seed","bank","filler","charcoal","wood","interceptor","windmill","bilgepump","crudehull","seaalloy","catapult","biolab","cotton","selfdestruct","derrick","controller","plutonium","deuteriumcap","lcd","radio","horse","crate","flubber","belt","foundation","concrete","scubasuit","pulsedrive","brake","speedwalk","trampoline","paybox","y","turboshaft","sword","musket","scattergun","pistol","torch","fuelcan","hammer","wrench","viper","lasersword","stinger","pitchfork","blinkdisplacer","plasmapistol","saving","templates","bot","automaton","storms","seed","biolab","programming","energycannon","substances", "cmos", "relics"]
+#aliases for substance page
 substance = ["ammo", "coal", "water", "oil", "acid" "nitroglycerin", "nitrogen", "liquidnitrogen", "protaloxide", "protaliumoxide", "toxin", "gas", "steam"]
+#articles with multiple pages due to length
 listedArticles = { "programming":5, "biolab":2 }
 
 listMessages = {}
@@ -28,7 +32,7 @@ listMessages = {}
 async def on_ready():
   print("Initialized")
 
-
+#standard datalink info command
 @client.command()
 async def dl(ctx, arg):
   article = arg
@@ -37,9 +41,11 @@ async def dl(ctx, arg):
   if article.lower() in articles:
     articleEmbed = discord.Embed(title = article.capitalize()) 
     articleEmbed.set_image(url="https://pipe.miroware.io/5e97bfd35d5b6e0703983341/HelpMenuImages/" + article.lower() + ".png")
+#list amount of credits if in recipies.py
     if article.lower() in recipies.list:
       articleEmbed.description = str(recipies.list[article.lower()]) + " Credits"
     msg = await ctx.send(embed=articleEmbed)
+#reactions for long articles with multiple pages
     if (article.lower()[:-1] in listedArticles) or (article.lower() in listedArticles):
       await msg.add_reaction("⬅️")
       await msg.add_reaction("➡️")
@@ -57,6 +63,7 @@ async def dl(ctx, arg):
 #async def on_command_error(ctx, error):
 #  await ctx.send("An error occured while running the command. Did #you forget a required argument?")
 
+#lists all parts
 @client.command()
 async def list(ctx):
   result = ""
@@ -93,8 +100,11 @@ async def on_reaction_add(reaction, user):
       await msg.edit(embed=articleEmbed)
       await reaction.remove(user)
   
+#relic alternative name lists
 ReplicationDevice = ["DeviceofReplication", "ReplicationDevice", "Device of Replication", "Replication Device"] 
 TeleportAxis = ["Axis Relativity", "Axis of Relativity", "AxisofRelativity", "AxisRelativity", "RelativityAxis", "Relativity Axis"]
+TelepathyBeacon =
+#actual relic command
 @client.command() 
 async def relic(ctx, arg): 
   relic = arg 
@@ -113,7 +123,7 @@ async def relic(ctx, arg):
 
 
 
-
+#server list command
 @client.command()
 async def servers(ctx):
     activeservers = client.guilds    
