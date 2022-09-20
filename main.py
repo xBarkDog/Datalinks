@@ -94,6 +94,7 @@ async def on_reaction_add(reaction, user):
       await reaction.remove(user)
   
 ReplicationDevice = ["DeviceofReplication", "ReplicationDevice", "Device of Replication", "Replication Device"] 
+TeleportAxis = ["Axis Relativity", "Axis of Relativity", "AxisofRelativity", "AxisRelativity", "RelativityAxis", "Relativity Axis"]
 @client.command() 
 async def relic(ctx, arg): 
   relic = arg 
@@ -103,16 +104,14 @@ async def relic(ctx, arg):
     relicEmbed.add_field(name="PG", value="Power Generation: 18/tick", inline=True) 
     relicEmbed.add_field(name="MV", value="Max Value: Unknown", inline=True)
     await ctx.send(embed=relicEmbed)
-
-
-TeleportAxis = ["Axis Relativity", "Axis of Relativity", "AxisofRelativity", "AxisRelativity", "RelativityAxis", "Relativity Axis"]
-@client.command() 
-async def relic(ctx, arg): 
-  relic = arg 
   if relic in TeleportAxis: 
     relicEmbed=discord.Embed(title="Axis of Relativity", description="teleports to specified XYZ coordinates when signaled, does not take power, shorter wind up then hyperdrive", color=0x0000c8)
     relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)
+
+
+
+
 
 
 @client.command()
