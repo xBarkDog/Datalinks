@@ -125,6 +125,7 @@ async def relic(ctx, arg):
 
 #server list command
 @client.command()
+@commands.is_owner()
 async def servers(ctx):
     activeservers = client.guilds    
     for guild in activeservers:
