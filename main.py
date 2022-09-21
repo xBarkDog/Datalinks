@@ -115,7 +115,7 @@ TelepathyBeacon = ["telepathybeacon", "beaconoftelepathy", "globalmessagebeacon"
 #actual relic command
 @client.command() 
 async def relic(ctx, *args): 
-  relic = ' '.join(args)
+  relic = ''.join(args)
   print (relic)
   if relic.lower() in ReplicationDevice: 
     relicEmbed=discord.Embed(title="Device of Replication", description="Duplicates 50 lower value parts when signaled", color=0x0000c8)
