@@ -138,13 +138,21 @@ async def servers(ctx):
 
 
 #useless status thing
-  status = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
+status = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
 statuse = ["GLORY AND JUSTICE", "OUR LORD", "FREEDOM"]
-FF = 200
-while FF > 5:
-  time.sleep(60)
-  for AL in statuse:
-    await bot.change_presence(activity=discord.Game(random.choice(AL)))
+@client.command()
+@commands.is.owner()
+async def status(ctx):
+  result = ""
+  for entry in status:
+    result = result + entry.capitalize() + ", " 
+  statusEmbed = discord.Embed(title="Status list", description=result[:-2])
+  await ctx.send(embed=statusEmbed)
+@client.command()
+@commands.is.owner()
+async def setstat
+  stat = arg
+  await bot.change_presence(activity=discord.Game(random.choice(stat)))
 
 
 
