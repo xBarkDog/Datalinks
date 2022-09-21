@@ -137,9 +137,7 @@ async def servers(ctx):
 
 
 
-#useless status thing
-@tasks.loop(minutes=2.5)
-async def status_task()
-  status = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
-  await bot.change_presence(activity=discord.Game(random.choice(status)))
+
+
+
 client.run("MTAxODk1MTEyOTYzNzMzNTA1MA.GpHP2L.IaiA_NHvaSTTn__jNIx3Q6RUnuw8WD69D3J48Q")
