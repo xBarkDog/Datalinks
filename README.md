@@ -7,7 +7,9 @@ multiple additions made by me
 
 
 # setup
-make a .env file
+make a .py file called "settings.py" with
 
-TOKEN=(token here)
-
+```
+TOKEN = "(token here)"
+PREFIX = "(prefix here)"
+```
