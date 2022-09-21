@@ -5,6 +5,7 @@ import recipies
 import json
 import asyncio
 import sys
+import time
 
 
 
@@ -24,7 +25,7 @@ articles = ["servo","mechlimb","stone","ice","lamp","copper","iron","drivebox","
 #aliases for substance page
 substance = ["ammo", "coal", "water", "oil", "acid" "nitroglycerin", "nitrogen", "liquidnitrogen", "protaloxide", "protaliumoxide", "toxin", "gas", "steam"]
 #aliases for template page
-templates = ["WedgeTemplate", "BallTemplate", "WheelTemplate", "BladeTemplate", "DoorTemplate", "CornerTemplate", "Wedge Template", "Ball Template", "Wheel Template", "Blade Template", "Door Template", "CornerTemplate]
+templates = ["WedgeTemplate", "BallTemplate", "WheelTemplate", "BladeTemplate", "DoorTemplate", "CornerTemplate", "Wedge Template", "Ball Template", "Wheel Template", "Blade Template", "Door Template", "CornerTemplate"]
 #articles with multiple pages due to length
 listedArticles = { "programming":5, "biolab":2 }
 
@@ -134,6 +135,27 @@ async def servers(ctx):
     activeservers = client.guilds    
     for guild in activeservers:
       await ctx.send(guild.name)
+
+
+#useless status thing
+statuslist = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
+#status set command
+@client.command()
+@commands.is_owner()
+async def status(ctx, arg):
+  statarg = arg
+  await client.change_presence(activity=discord.Game(statarg))
+  await ctx.send(statarg)
+
+#list of statuses i might use
+@client.command()
+@commands.is_owner()
+async def statlist(ctx):
+  result = ""
+  for entry in statuslist:
+    result = result + entry.capitalize() + " | " 
+  statEmbed = discord.Embed(title="Status List", description=result[:-2])
+  await ctx.send(embed=statEmbed)
 
 
 
