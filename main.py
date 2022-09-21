@@ -7,6 +7,10 @@ import asyncio
 import sys
 import time
 
+#importing env variables things and loading it
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 
