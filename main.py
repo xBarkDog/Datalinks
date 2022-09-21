@@ -50,6 +50,7 @@ async def dl(ctx, arg):
   if article.lower() in articles:
     articleEmbed = discord.Embed(title = article.capitalize()) 
     articleEmbed.set_image(url="https://pipe.miroware.io/5e97bfd35d5b6e0703983341/HelpMenuImages/" + article.lower() + ".png")
+    print('dl command successfully executed')
 #list amount of credits if in recipies.py
     if article.lower() in recipies.list:
       articleEmbed.description = str(recipies.list[article.lower()]) + " Credits"
@@ -80,6 +81,7 @@ async def list(ctx):
     result = result + entry.capitalize() + ", " 
   listEmbed = discord.Embed(title="Part List", description=result[:-2])
   await ctx.send(embed=listEmbed)
+  print('list command successfully executed')
   
 
 @client.event
@@ -110,27 +112,31 @@ async def on_reaction_add(reaction, user):
       await reaction.remove(user)
   
 #relic name lists
-ReplicationDevice = ["DeviceofReplication", "ReplicationDevice", "Device of Replication", "Replication Device"] 
-TeleportAxis = ["Axis Relativity", "Axis of Relativity", "AxisofRelativity", "AxisRelativity", "RelativityAxis", "Relativity Axis"]
-TelepathyBeacon = ["TelepathyBeacon", "Telepathy Beacon", "BeaconofTelepathy", "Beacon of Telepathy"]
+ReplicationDevice = ["deviceofreplication", "replicationdevice"] 
+TeleportAxis = ["axisofrelativity", "axisrelativity", "relativityaxis"]
+TelepathyBeacon = ["telepathybeacon", "beaconoftelepathy", "globalmessagebeacon", "/mbeacon"]
 #actual relic command
 @client.command() 
-async def relic(ctx, arg): 
-  relic = arg 
+async def relic(ctx, *args): 
+  relic = ' '.join(args)
+  print (relic)
   if relic.lower() in ReplicationDevice: 
     relicEmbed=discord.Embed(title="Device of Replication", description="Duplicates 50 lower value parts when signaled", color=0x0000c8)
     relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     relicEmbed.add_field(name="PG", value="Power Generation: 18/tick", inline=True) 
     relicEmbed.add_field(name="MV", value="Max Value: Unknown", inline=True)
     await ctx.send(embed=relicEmbed)
+    print('relic command for Device of Replication successfully executed')
   if relic.lower() in TeleportAxis: 
     relicEmbed=discord.Embed(title="Axis of Relativity", description="teleports to specified XYZ coordinates when signaled, does not take power, shorter wind up then hyperdrive", color=0x0000c8)
     relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)
+    print('relic command for Axis of Relativity successfully executed')
   if relic.lower() in TelepathyBeacon:
-    relicEmbed=discord.Embed(title="Beacon of Telepathyy", description="/m except for regular mortals such as us (can be used by multiple people, perhaps if unlocked?) so displays global message when message sent near it.", color=0x0000c8)
+    relicEmbed=discord.Embed(title="Beacon of Telepathy", description="/m except for regular mortals such as us (can be used by multiple people, perhaps if unlocked?) so displays global message when message sent near it.", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
+    print('relic command for Beacon of Telepathy successfully executed')
 
 
 
@@ -142,6 +148,8 @@ async def servers(ctx):
     activeservers = client.guilds    
     for guild in activeservers:
       await ctx.send(guild.name)
+      print('server list command successfully executed for')
+      print(guild.name)
 
 
 #useless status thing
@@ -153,6 +161,7 @@ async def status(ctx, arg):
   statarg = arg
   await client.change_presence(activity=discord.Game(statarg))
   await ctx.send(statarg)
+  print('status command successfully executed')
 
 #list of statuses i might use
 @client.command()
@@ -163,6 +172,7 @@ async def statlist(ctx):
     result = result + entry.capitalize() + " | " 
   statEmbed = discord.Embed(title="Status List", description=result[:-2])
   await ctx.send(embed=statEmbed)
+  print('list of statuses command successfully executed')
 
 
 
