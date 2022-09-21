@@ -165,4 +165,4 @@ async def statlist(ctx):
 
 
 
-client.run("MTAxODk1MTEyOTYzNzMzNTA1MA.GpHP2L.IaiA_NHvaSTTn__jNIx3Q6RUnuw8WD69D3J48Q")
+client.run(os.getenv("TOKEN"))
