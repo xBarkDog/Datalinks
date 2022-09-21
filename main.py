@@ -138,21 +138,24 @@ async def servers(ctx):
 
 
 #useless status thing
-status = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
-statuse = ["GLORY AND JUSTICE", "OUR LORD", "FREEDOM"]
+statuslist = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
+#status set command
 @client.command()
-@commands.is.owner()
-async def status(ctx):
+@commands.is_owner()
+async def status(ctx, arg):
+  statarg = arg
+  await client.change_presence(activity=discord.Game(statarg))
+  await ctx.send(statarg)
+
+#list of statuses i might use
+@client.command()
+@commands.is_owner()
+async def statlist(ctx):
   result = ""
-  for entry in status:
-    result = result + entry.capitalize() + ", " 
-  statusEmbed = discord.Embed(title="Status list", description=result[:-2])
-  await ctx.send(embed=statusEmbed)
-@client.command()
-@commands.is.owner()
-async def setstat
-  stat = arg
-  await bot.change_presence(activity=discord.Game(random.choice(stat)))
+  for entry in statuslist:
+    result = result + entry.capitalize() + " | " 
+  statEmbed = discord.Embed(title="Status List", description=result[:-2])
+  await ctx.send(embed=statEmbed)
 
 
 
