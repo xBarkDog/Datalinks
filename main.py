@@ -108,22 +108,25 @@ async def on_reaction_add(reaction, user):
 #relic name lists
 ReplicationDevice = ["DeviceofReplication", "ReplicationDevice", "Device of Replication", "Replication Device"] 
 TeleportAxis = ["Axis Relativity", "Axis of Relativity", "AxisofRelativity", "AxisRelativity", "RelativityAxis", "Relativity Axis"]
-TelepathyBeacon =
+TelepathyBeacon = ["TelepathyBeacon", "Telepathy Beacon", "BeaconofTelepathy", "Beacon of Telepathy"]
 #actual relic command
 @client.command() 
 async def relic(ctx, arg): 
   relic = arg 
-  if relic in ReplicationDevice: 
+  if relic.lower() in ReplicationDevice: 
     relicEmbed=discord.Embed(title="Device of Replication", description="Duplicates 50 lower value parts when signaled", color=0x0000c8)
     relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     relicEmbed.add_field(name="PG", value="Power Generation: 18/tick", inline=True) 
     relicEmbed.add_field(name="MV", value="Max Value: Unknown", inline=True)
     await ctx.send(embed=relicEmbed)
-  if relic in TeleportAxis: 
+  if relic.lower() in TeleportAxis: 
     relicEmbed=discord.Embed(title="Axis of Relativity", description="teleports to specified XYZ coordinates when signaled, does not take power, shorter wind up then hyperdrive", color=0x0000c8)
     relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)
-
+  if relic.lower() in TelepathyBeacon:
+    relicEmbed=discord.Embed(title="Beacon of Telepathyy", description="/m except for regular mortals such as us (can be used by multiple people, perhaps if unlocked?) so displays global message when message sent near it.", color=0x0000c8)
+    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
+    await ctx.send(embed=relicEmbed)  
 
 
 
