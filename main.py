@@ -5,6 +5,7 @@ import recipies
 import json
 import asyncio
 import sys
+import time
 
 
 
@@ -134,6 +135,16 @@ async def servers(ctx):
     activeservers = client.guilds    
     for guild in activeservers:
       await ctx.send(guild.name)
+
+
+#useless status thing
+  status = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
+statuse = ["GLORY AND JUSTICE", "OUR LORD", "FREEDOM"]
+FF = 200
+while FF > 5
+  time.sleep(60)
+   for AL in statuse:
+   await bot.change_presence(activity=discord.Game(random.choice(AL)))
 
 
 
