@@ -7,6 +7,7 @@ import asyncio
 import sys
 import time
 import settings
+import random
 
 
 
@@ -173,8 +174,17 @@ async def statlist(ctx):
   print('list of statuses command successfully executed')
 
 
+@client.listen()
+async def on_ready():
+    task_loop.start() # important to start the loop
 
-
+@tasks.loop(seconds=180)
+async def task_loop():
+    ... #ever 180 seconds the random status thing is executed (or every 3 minutes)
+    CC = random.choice(statuslist)
+    await client.change_presence(activity=discord.Game(CC))
+    print(CC)
+    print("random status task successfully executed")
 
 
 client.run(settings.TOKEN)
