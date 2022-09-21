@@ -9,5 +9,5 @@ multiple additions made by me
 # setup
 make a .env file
 
-token=(token here)
+TOKEN=(token here)
 
