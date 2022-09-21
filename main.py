@@ -12,7 +12,7 @@ import random
 
 
 
-from discord.ext import commands
+from discord.ext import commands, tasks
 
 #intents
 intents = discord.Intents.default()
