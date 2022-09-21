@@ -25,7 +25,7 @@ articles = ["servo","mechlimb","stone","ice","lamp","copper","iron","drivebox","
 #aliases for substance page
 substance = ["ammo", "coal", "water", "oil", "acid" "nitroglycerin", "nitrogen", "liquidnitrogen", "protaloxide", "protaliumoxide", "toxin", "gas", "steam"]
 #aliases for template page
-templates = ["WedgeTemplate", "BallTemplate", "WheelTemplate", "BladeTemplate", "DoorTemplate", "CornerTemplate", "Wedge Template", "Ball Template", "Wheel Template", "Blade Template", "Door Template", "CornerTemplate]
+templates = ["WedgeTemplate", "BallTemplate", "WheelTemplate", "BladeTemplate", "DoorTemplate", "CornerTemplate", "Wedge Template", "Ball Template", "Wheel Template", "Blade Template", "Door Template", "CornerTemplate"]
 #articles with multiple pages due to length
 listedArticles = { "programming":5, "biolab":2 }
 
@@ -141,10 +141,10 @@ async def servers(ctx):
   status = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
 statuse = ["GLORY AND JUSTICE", "OUR LORD", "FREEDOM"]
 FF = 200
-while FF > 5
+while FF > 5:
   time.sleep(60)
-   for AL in statuse:
-   await bot.change_presence(activity=discord.Game(random.choice(AL)))
+  for AL in statuse:
+    await bot.change_presence(activity=discord.Game(random.choice(AL)))
 
 
 
