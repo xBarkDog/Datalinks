@@ -104,7 +104,7 @@ async def on_reaction_add(reaction, user):
       await msg.edit(embed=articleEmbed)
       await reaction.remove(user)
   
-#relic alternative name lists
+#relic name lists
 ReplicationDevice = ["DeviceofReplication", "ReplicationDevice", "Device of Replication", "Replication Device"] 
 TeleportAxis = ["Axis Relativity", "Axis of Relativity", "AxisofRelativity", "AxisRelativity", "RelativityAxis", "Relativity Axis"]
 TelepathyBeacon =
@@ -136,4 +136,10 @@ async def servers(ctx):
       await ctx.send(guild.name)
 
 
+
+#useless status thing
+@tasks.loop(minutes=2.5)
+async def status_task()
+  status = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
+  await bot.change_presence(activity=discord.Game(random.choice(status)))
 client.run("MTAxODk1MTEyOTYzNzMzNTA1MA.GpHP2L.IaiA_NHvaSTTn__jNIx3Q6RUnuw8WD69D3J48Q")
