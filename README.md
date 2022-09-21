@@ -7,8 +7,6 @@ multiple additions made by me
 
 
 # setup
-use sure branch
-
 make a .env file
 
 token=(token here)
