@@ -154,8 +154,8 @@ statuslist = ["VOTE WAR", "if you vote cold war in the next minute, devan will t
 #status set command
 @client.command()
 @commands.is_owner()
-async def status(ctx, arg):
-  statarg = arg
+async def status(ctx, *args):
+  statarg = ''.join(args)
   await client.change_presence(activity=discord.Game(statarg))
   await ctx.send(statarg)
   print('status command successfully executed')
