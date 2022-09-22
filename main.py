@@ -113,6 +113,10 @@ async def on_reaction_add(reaction, user):
 ReplicationDevice = ["deviceofreplication", "replicationdevice"] 
 TeleportAxis = ["axisofrelativity", "axisrelativity", "relativityaxis"]
 TelepathyBeacon = ["telepathybeacon", "beaconoftelepathy", "globalmessagebeacon", "/mbeacon"]
+VengeanceBlade = ["bladeofvengeance", "vengeanceblade"]
+WealthCauldron = ["wealthcauldron", "cauldronofwealth"]
+InfChalice = ["infinitychalice", "gobletofplenty", "plentychalice", "gobletofinfinity"]
+SerenityShield = ["serenityorb", "orbofserenity", "serenityshield", "orbshield"]
 #actual relic command
 @client.command() 
 async def relic(ctx, *args): 
@@ -135,7 +139,27 @@ async def relic(ctx, *args):
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Beacon of Telepathy successfully executed')
-
+  if relic.lower() in VengeanceBlade:
+    relicEmbed=discord.Embed(title="Blade of Vengeance", description="keks anything it touches except if locked by rogue", color=0x0000c8)
+    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
+    await ctx.send(embed=relicEmbed)  
+    print('relic command for Blade of Vengeance successfully executed')
+  if relic.lower() in WealthCauldron:
+    relicEmbed=discord.Embed(title="Cauldron of Wealth", description="gives credits", color=0x0000c8)
+    relicEmbed.add_field(name="CR/s", value="Credit Generation: 2/second", inline=True) 
+    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
+    await ctx.send(embed=relicEmbed)  
+    print('relic command for Cauldron of Wealth successfully executed')
+  if relic.lower() in InfChalice:
+    relicEmbed=discord.Embed(title="Goblet of Plenty", description="containers and powercells never run out when attached unless your using it unrealistically fast", color=0x0000c8)
+    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
+    await ctx.send(embed=relicEmbed)  
+    print('relic command for Goblet of Plenty successfully executed')
+  if relic.lower() in SerenityShield:
+    relicEmbed=discord.Embed(title="Orb of Serenity", description="spawns an immovable shield (possibly terrain) that is made out of arcolantium textured parts and transparent part", color=0x0000c8)
+    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
+    await ctx.send(embed=relicEmbed)  
+    print('relic command for Ore of Serenity successfully executed')
 
 
 
