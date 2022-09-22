@@ -1,5 +1,5 @@
 list = {'abantium' : 6,
-'accelerator' : 3000,
+'accelerator' : 1600,
 'activedefense' : 250,
 'actuator' : 10,
 'aethergate' : 7500,
