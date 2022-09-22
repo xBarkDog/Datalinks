@@ -8,7 +8,7 @@ import sys
 import time
 import settings
 import random
-
+import importlib
 
 
 
@@ -194,6 +194,22 @@ async def task_loop():
     await client.change_presence(activity=discord.Game(CC))
     print(CC)
     print("random status task successfully executed")
+
+
+
+#update prices if recipies has been updated
+@client.command()
+@commands.is_owner()
+async def updateprice(ctx):
+  importlib.reload(recipies)
+
+
+#update settings
+@client.command()
+@commands.is_owner()
+async def updatesettings(ctx):
+  importlib.reload(settings)
+
 
 
 client.run(settings.TOKEN)
