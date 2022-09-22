@@ -135,23 +135,23 @@ async def relic(ctx, *args):
     await ctx.send(embed=relicEmbed)
     print('relic command for Axis of Relativity successfully executed')
   if relic.lower() in TelepathyBeacon:
-    relicEmbed=discord.Embed(title="Beacon of Telepathy", description="/m except for regular mortals such as us (can be used by multiple people, perhaps if unlocked?) so displays global message when message sent near it.", color=0x0000c8)
+    relicEmbed=discord.Embed(title="Beacon of Telepathy", description="allows the user who locked it to use /m anywhere", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Beacon of Telepathy successfully executed')
   if relic.lower() in VengeanceBlade:
-    relicEmbed=discord.Embed(title="Blade of Vengeance", description="keks anything it touches except if locked by rogue", color=0x0000c8)
+    relicEmbed=discord.Embed(title="Blade of Vengeance", description="Instantly destroys any part it touchs unless the part is locked by a rogue.", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Blade of Vengeance successfully executed')
   if relic.lower() in WealthCauldron:
-    relicEmbed=discord.Embed(title="Cauldron of Wealth", description="gives credits", color=0x0000c8)
+    relicEmbed=discord.Embed(title="Cauldron of Wealth", description="Gives credits every second.", color=0x0000c8)
     relicEmbed.add_field(name="CR/s", value="Credit Generation: 2/second", inline=True) 
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Cauldron of Wealth successfully executed')
   if relic.lower() in InfChalice:
-    relicEmbed=discord.Embed(title="Goblet of Plenty", description="containers and powercells never run out when attached unless your using it unrealistically fast", color=0x0000c8)
+    relicEmbed=discord.Embed(title="Goblet of Plenty", description="Constantly fills containers and powercells.", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Goblet of Plenty successfully executed')
