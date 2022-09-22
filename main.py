@@ -173,6 +173,15 @@ async def statlist(ctx):
   await ctx.send(embed=statEmbed)
   print('list of statuses command successfully executed')
 
+#status list for mobile (for easier copying)
+@client.command()
+@commands.is_owner()
+async def statmobile(ctx):
+  result = ""
+  for mobentry in statuslist:
+    await ctx.send(mobentry)
+
+
 
 @client.listen()
 async def on_ready():
