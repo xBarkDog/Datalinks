@@ -236,4 +236,13 @@ async def updatesettings(ctx):
 
 
 
+@client.command()
+@commands.is_owner()
+async def speak(ctx, arg):
+  sayarg = ' '.join(args)
+  await ctx.send(sayarg)
+
+
+
+
 client.run(settings.TOKEN)
