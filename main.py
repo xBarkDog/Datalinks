@@ -211,9 +211,9 @@ async def statmobile(ctx):
 async def on_ready():
     task_loop.start() # important to start the loop
 
-@tasks.loop(seconds=180)
+@tasks.loop(seconds=2100)
 async def task_loop():
-    ... #ever 180 seconds the random status thing is executed (or every 3 minutes)
+    ... #ever 2100 seconds the random status thing is executed (or every 35 minutes)
     CC = random.choice(statuslist)
     await client.change_presence(activity=discord.Game(CC))
     print(CC)
@@ -241,7 +241,8 @@ async def updatesettings(ctx):
 async def speak(ctx, arg):
   sayarg = ' '.join(args)
   await ctx.send(sayarg)
-
+  print(sayarg)
+  print("Speak command successfully executed")
 
 
 
