@@ -226,6 +226,7 @@ async def task_loop():
 @commands.is_owner()
 async def updateprice(ctx):
   importlib.reload(recipies)
+  print("updating of prices successfuly executed")
 
 
 #update settings
@@ -233,7 +234,7 @@ async def updateprice(ctx):
 @commands.is_owner()
 async def updatesettings(ctx):
   importlib.reload(settings)
-
+  print("settings update successfuly executed")
 
 
 @client.command()
