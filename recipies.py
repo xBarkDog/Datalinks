@@ -219,4 +219,5 @@ list = {'abantium' : 6,
 'wood' : 2,
 'zapwire' : 6,
 'endgame' : 1250,
-'photonshard' : 300,}
+'photonshard' : 300,
+'missile' : 60,}
