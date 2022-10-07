@@ -122,44 +122,46 @@ SerenityShield = ["serenityorb", "orbofserenity", "serenityshield", "orbshield"]
 async def relic(ctx, *args): 
   relic = ''.join(args)
   print (relic)
-  if relic.lower() in ReplicationDevice: 
+  elif relic.lower() in ReplicationDevice: 
     relicEmbed=discord.Embed(title="Device of Replication", description="Duplicates 50 lower value parts when signaled", color=0x0000c8)
     relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     relicEmbed.add_field(name="PG", value="Power Generation: 18/tick", inline=True) 
     relicEmbed.add_field(name="MV", value="Max Value: Unknown", inline=True)
     await ctx.send(embed=relicEmbed)
     print('relic command for Device of Replication successfully executed')
-  if relic.lower() in TeleportAxis: 
+  elif relic.lower() in TeleportAxis: 
     relicEmbed=discord.Embed(title="Axis of Relativity", description="teleports to specified XYZ coordinates when signaled, does not take power, shorter wind up then hyperdrive", color=0x0000c8)
-    relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
+    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)
     print('relic command for Axis of Relativity successfully executed')
-  if relic.lower() in TelepathyBeacon:
+  elif relic.lower() in TelepathyBeacon:
     relicEmbed=discord.Embed(title="Beacon of Telepathy", description="allows the user who locked it to use /m anywhere", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Beacon of Telepathy successfully executed')
-  if relic.lower() in VengeanceBlade:
+  elif relic.lower() in VengeanceBlade:
     relicEmbed=discord.Embed(title="Blade of Vengeance", description="Instantly destroys any part it touchs unless the part is locked by a rogue.", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Blade of Vengeance successfully executed')
-  if relic.lower() in WealthCauldron:
+  elif relic.lower() in WealthCauldron:
     relicEmbed=discord.Embed(title="Cauldron of Wealth", description="Gives credits every second.", color=0x0000c8)
     relicEmbed.add_field(name="CR/s", value="Credit Generation: 2/second", inline=True) 
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Cauldron of Wealth successfully executed')
-  if relic.lower() in InfChalice:
+  elif relic.lower() in InfChalice:
     relicEmbed=discord.Embed(title="Goblet of Plenty", description="Constantly fills containers and powercells.", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Goblet of Plenty successfully executed')
-  if relic.lower() in SerenityShield:
+  elif relic.lower() in SerenityShield:
     relicEmbed=discord.Embed(title="Orb of Serenity", description="spawns an immovable shield (possibly terrain) that is made out of arcolantium textured parts and transparent part", color=0x0000c8)
     #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     await ctx.send(embed=relicEmbed)  
     print('relic command for Ore of Serenity successfully executed')
+  else:
+    ctx.send("RELIC NOT FOUND")
 
 
 
