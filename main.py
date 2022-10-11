@@ -122,7 +122,7 @@ SerenityShield = ["serenityorb", "orbofserenity", "serenityshield", "orbshield"]
 async def relic(ctx, *args): 
   relic = ''.join(args)
   print (relic)
-  elif relic.lower() in ReplicationDevice: 
+  if relic.lower() in ReplicationDevice: 
     relicEmbed=discord.Embed(title="Device of Replication", description="Duplicates 50 lower value parts when signaled", color=0x0000c8)
     relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
     relicEmbed.add_field(name="PG", value="Power Generation: 18/tick", inline=True) 
