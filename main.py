@@ -23,11 +23,13 @@ intents.message_content = True
 client = commands.Bot(command_prefix=settings.PREFIX, intents=intents)
 
 #list of datalink articles
-articles = ["servo","mechlimb","stone","ice","lamp","copper","iron","drivebox","jade","transformer","arcolantium","brick","silicon","gold","instrument","levitator","hydrogenerator","carbonfiber","uranium","antenna","plastic","flint","gear","diamond","eridanium","seat","aluminium","sail","rubber","cleats","spotlight","turbofan","cooler","anchor","delaywire","titanium","crudewing","amethyst","glass","wing","herbicide","leaves","organicmatter","neodymium","thruster","gravdevice","steeringseat","lightningrod","psibutton","gyro","dynamite","refinery","dimensionaldoor","forcefield","missile","television","magnesium","sand","asphalt","gunpowder","ashes","touchtrigger","zapwire","ruby","explosives","remoteseat","quartz","solarpanel","speaker","powercell","container","inverter","heater","wire","sign","switch","light","generator","signalwire","tintedglass","polysilicon","balloon","truss","firework","faucet","exoticmatter","photonshard","glowtube","cannon","treads","motor","propeller","converter","pipe","lift","enricheduranium","signalswitch","empbomb","coat","polyestercoat","engine","inertiatrigger","gammadrive","warhead","reactor","spawnpoint","rocket","camera","spacesuit","protalium","protoncell","airshield","factory","ore","modem","basecenter","seeker","hyperdrive","prospector","steamengine","lirvanite","energybomb","timemachine","pod","biowall","clock","ballasttank","keyboard","cloakingdevice","alkalinecell","commlink","bogie","radiationsuit","sulfur","activedefense","aethergate","combolock","lab","powerplant","teleporter","goo","hull","ionrocket","iondrive","lasertargeter","actuator","node","valve","memorychip","monitor","scanner","mainspring","heatcylinder","searchlight","computer","energyshield","accelerator","energycannon","abantium","armor","rotor","beamcannon","lexan","zaktralia","firewood","probabilityfield","foam","flamethrower","launcher","sensor","graphicscard","cloth","ceramic","ramjet","dish","button","singularitybomb","radar","gel","plant","inductor","firebox","geigercounter","gun","book","track","bend","market","warpgate","automaton","parachutepack","seed","bank","filler","charcoal","wood","interceptor","windmill","bilgepump","crudehull","seaalloy","catapult","biolab","cotton","selfdestruct","derrick","controller","plutonium","deuteriumcap","lcd","radio","horse","crate","flubber","belt","foundation","concrete","scubasuit","pulsedrive","brake","speedwalk","trampoline","paybox","y","turboshaft","sword","musket","scattergun","pistol","torch","fuelcan","hammer","wrench","viper","lasersword","stinger","pitchfork","blinkdisplacer","plasmapistol","saving","templates","bot","storms","seed","biolab","programming","energycannon","substances", "cmos", "relics", "endgame", "handcannon", "machinegun"]
-#aliases for substance page
-substance = ["ammo", "coal", "water", "oil", "acid" "nitroglycerin", "nitrogen", "liquidnitrogen", "protaloxide", "protaliumoxide", "toxin", "gas", "steam"]
-#aliases for template page
-templates = ["WedgeTemplate", "BallTemplate", "WheelTemplate", "BladeTemplate", "DoorTemplate", "CornerTemplate", "Wedge Template", "Ball Template", "Wheel Template", "Blade Template", "Door Template", "CornerTemplate"]
+articles = ["servo","mechlimb","stone","ice","lamp","copper","iron","drivebox","jade","transformer","arcolantium","brick","silicon","gold","instrument","levitator","hydrogenerator","carbonfiber","uranium","antenna","plastic","flint","gear","diamond","eridanium","seat","aluminium","sail","rubber","cleats","spotlight","turbofan","cooler","anchor","delaywire","titanium","crudewing","amethyst","glass","wing","herbicide","leaves","organicmatter","neodymium","thruster","gravdevice","steeringseat","lightningrod","psibutton","gyro","dynamite","refinery","dimensionaldoor","forcefield","missile","television","magnesium","sand","asphalt","gunpowder","ashes","touchtrigger","zapwire","ruby","explosives","remoteseat","quartz","solarpanel","speaker","powercell","container","inverter","heater","wire","sign","switch","light","generator","signalwire","tintedglass","polysilicon","balloon","truss","firework","faucet","exoticmatter","photonshard","glowtube","cannon","treads","motor","propeller","converter","pipe","lift","enricheduranium","signalswitch","empbomb","coat","polyestercoat","engine","inertiatrigger","gammadrive","warhead","reactor","spawnpoint","rocket","camera","spacesuit","protalium","protoncell","airshield","factory","ore","modem","basecenter","seeker","hyperdrive","prospector","steamengine","lirvanite","energybomb","timemachine","pod","biowall","clock","ballasttank","keyboard","cloakingdevice","alkalinecell","commlink","bogie","radiationsuit","sulfur","activedefense","aethergate","combolock","lab","powerplant","teleporter","goo","hull","ionrocket","iondrive","lasertargeter","actuator","node","valve","memorychip","monitor","scanner","mainspring","heatcylinder","searchlight","computer","energyshield","accelerator","energycannon","abantium","armor","rotor","beamcannon","lexan","zaktralia","firewood","probabilityfield","foam","flamethrower","launcher","sensor","graphicscard","cloth","ceramic","ramjet","dish","button","singularitybomb","radar","gel","plant","inductor","firebox","geigercounter","gun","book","track","bend","market","warpgate","automaton","parachutepack","seed","bank","filler","charcoal","wood","interceptor","windmill","bilgepump","crudehull","seaalloy","catapult","biolab","cotton","selfdestruct","derrick","controller","plutonium","deuteriumcap","lcd","radio","horse","crate","flubber","belt","foundation","concrete","scubasuit","pulsedrive","brake","speedwalk","trampoline","paybox","y","turboshaft","sword","musket","scattergun","pistol","torch","fuelcan","hammer","wrench","viper","lasersword","stinger","pitchfork","blinkdisplacer","plasmapistol","saving","templates","bot","storms","seed","biolab","programming","energycannon","substances", "cmos", "relics", "endgame", "handcannon", "machinegun", "ammo", "coal", "water", "oil", "acid", "nitroglycerin", "nitrogen", "liquidnitrogen", "protaloxide", "protaliumoxide", "toxin", "gas", "steam"]
+#aliases
+templates = ["wedgetemplate", "balltemplate", "wheeltemplate", "bladetemplate", "doortemplate", "cornertemplate", "wedge", "ball", "wheel", "blade", "door", "corner"]
+
+sportball = ["sportsball", "volleyball", "basketball", "baseball", "dodgeball", "bowlingball", "sandbag"]
+
+botspawn = ["jolemspawner", "jolemspawn", "botspawner", "automatonspawn", "automatonspawner"]
 #articles with multiple pages due to length
 listedArticles = { "programming":5, "biolab":2 }
 
@@ -40,11 +42,17 @@ async def on_ready():
 #standard datalink info command
 @client.command()
 async def dl(ctx, arg):
-  article = arg
-  if article.lower() in substance:
-    article = "substances"
+  article = ''.join(arg)
+
   if article.lower() in templates:
     article = "templates"
+  if article.lower() in sportball:
+    article = "sportball"
+  if article.lower() == "protal":
+    article = "protalium"
+  if article.lower() in botspawn:
+    article = "botspawn"
+  
   if article.lower() in articles:
     articleEmbed = discord.Embed(title = article.capitalize()) 
     articleEmbed.set_image(url="https://pipe.miroware.io/5e97bfd35d5b6e0703983341/HelpMenuImages/" + article.lower() + ".png")
@@ -67,9 +75,6 @@ async def dl(ctx, arg):
 
     
 
-#@client.event
-#async def on_command_error(ctx, error):
-#  await ctx.send("An error occured while running the command. Did #you forget a required argument?")
 
 #lists all parts
 @client.command()
@@ -118,50 +123,6 @@ WealthCauldron = ["wealthcauldron", "cauldronofwealth"]
 InfChalice = ["infinitychalice", "gobletofplenty", "plentychalice", "gobletofinfinity"]
 SerenityShield = ["serenityorb", "orbofserenity", "serenityshield", "orbshield"]
 #actual relic command
-@client.command() 
-async def relic(ctx, *args): 
-  relic = ''.join(args)
-  print (relic)
-  elif relic.lower() in ReplicationDevice: 
-    relicEmbed=discord.Embed(title="Device of Replication", description="Duplicates 50 lower value parts when signaled", color=0x0000c8)
-    relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
-    relicEmbed.add_field(name="PG", value="Power Generation: 18/tick", inline=True) 
-    relicEmbed.add_field(name="MV", value="Max Value: Unknown", inline=True)
-    await ctx.send(embed=relicEmbed)
-    print('relic command for Device of Replication successfully executed')
-  elif relic.lower() in TeleportAxis: 
-    relicEmbed=discord.Embed(title="Axis of Relativity", description="teleports to specified XYZ coordinates when signaled, does not take power, shorter wind up then hyperdrive", color=0x0000c8)
-    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
-    await ctx.send(embed=relicEmbed)
-    print('relic command for Axis of Relativity successfully executed')
-  elif relic.lower() in TelepathyBeacon:
-    relicEmbed=discord.Embed(title="Beacon of Telepathy", description="allows the user who locked it to use /m anywhere", color=0x0000c8)
-    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
-    await ctx.send(embed=relicEmbed)  
-    print('relic command for Beacon of Telepathy successfully executed')
-  elif relic.lower() in VengeanceBlade:
-    relicEmbed=discord.Embed(title="Blade of Vengeance", description="Instantly destroys any part it touchs unless the part is locked by a rogue.", color=0x0000c8)
-    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
-    await ctx.send(embed=relicEmbed)  
-    print('relic command for Blade of Vengeance successfully executed')
-  elif relic.lower() in WealthCauldron:
-    relicEmbed=discord.Embed(title="Cauldron of Wealth", description="Gives credits every second.", color=0x0000c8)
-    relicEmbed.add_field(name="CR/s", value="Credit Generation: 2/second", inline=True) 
-    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
-    await ctx.send(embed=relicEmbed)  
-    print('relic command for Cauldron of Wealth successfully executed')
-  elif relic.lower() in InfChalice:
-    relicEmbed=discord.Embed(title="Goblet of Plenty", description="Constantly fills containers and powercells.", color=0x0000c8)
-    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
-    await ctx.send(embed=relicEmbed)  
-    print('relic command for Goblet of Plenty successfully executed')
-  elif relic.lower() in SerenityShield:
-    relicEmbed=discord.Embed(title="Orb of Serenity", description="spawns an immovable shield (possibly terrain) that is made out of arcolantium textured parts and transparent parts", color=0x0000c8)
-    #relicEmbed.set_thumbnail(url="https://media.discordapp.net/attachments/1020146938638778429/1020780156895379497/DeviceOfReplication.PNG")
-    await ctx.send(embed=relicEmbed)  
-    print('relic command for Ore of Serenity successfully executed')
-  else:
-    ctx.send("RELIC NOT FOUND")
 
 
 
@@ -177,7 +138,7 @@ async def servers(ctx):
 
 
 #useless status thing
-statuslist = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^"]
+statuslist = ["VOTE WAR", "if you vote cold war in the next minute, devan will tell us his deepest secret and fears", "this is how we played tetris back in the days before new fangled electricity", "/s cj", "Walking Simulator", "bill nye the scibust guy", "the prefix is ^", "forget it, enjoy being cavemen loser nubs"]
 #status set command
 @client.command()
 @commands.is_owner()
@@ -242,8 +203,10 @@ async def updatesettings(ctx):
 @client.command()
 @commands.is_owner()
 async def speak(ctx, arg):
-  sayarg = ' '.join(args)
-  await ctx.send(sayarg)
+  arg1 = ' '.join(arg)
+  sayarg = arg1.split("|", 1)
+  channel = client.get_channel(sayarg[1])
+  await channel.send(sayarg[2])
   print(sayarg)
   print("Speak command successfully executed")
 
