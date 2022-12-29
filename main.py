@@ -202,12 +202,10 @@ async def updatesettings(ctx):
 
 @client.command()
 @commands.is_owner()
-async def speak(ctx, arg):
-  arg1 = ' '.join(arg)
-  sayarg = arg1.split("|", 1)
-  channel = client.get_channel(sayarg[1])
-  await channel.send(sayarg[2])
-  print(sayarg)
+async def speak(ctx, id, say):
+  channel = client.get_channel(id)
+  await channel.send(say)
+  print(say)
   print("Speak command successfully executed")
 
 
