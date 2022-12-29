@@ -189,7 +189,7 @@ async def task_loop():
 @commands.is_owner()
 async def updateprice(ctx):
   importlib.reload(recipies)
-  print("updating of prices successfuly executed")
+  print("updating of prices successfully executed")
 
 
 #update settings
@@ -197,14 +197,14 @@ async def updateprice(ctx):
 @commands.is_owner()
 async def updatesettings(ctx):
   importlib.reload(settings)
-  print("settings update successfuly executed")
+  print("settings update successfully executed")
 
 
 @client.command()
 @commands.is_owner()
-async def speak(ctx, id, say):
-  channel = client.get_channel(id)
-  await channel.send(say)
+async def speak(ctx, say):
+  sayarg = ' '.join(say)
+  await ctx.send(sayarg)
   print(say)
   print("Speak command successfully executed")
 
